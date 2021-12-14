@@ -1,0 +1,280 @@
+<html>
+    <head>
+        <title>UDHGJ</title>
+
+        <style>
+            body{
+            background-color:rgb(145, 184, 211);
+            color:black;
+          }
+                
+          .container {
+                background-color:white;
+                color:black;
+                  width: 100%;
+                   font-family: Arial, Helvetica, sans-serif;
+                }
+                section
+                {
+                  margin: 10%;
+                }
+    
+                header {
+                    background-color:lightblue;
+                    color:black;
+                    text-align:center;
+                    padding:0%;	 
+                }
+                nav {
+    
+                    line-height:130%;
+                    background-color:#eeeeee;
+                    width:30%;
+                    float:left;
+                    padding:1%;	  
+                    color: black;
+                    position: fixed;
+                    left: 0;
+                    top: 25%;
+    
+    
+                }
+               
+    
+    
+                section {
+    
+                 line-height:130%;
+                    width:95%;
+                    float:right;
+                    padding:1%;	 	 
+                }
+    
+    
+                footer {
+                    background-color:#eeeeee;
+                    color:black;
+                    clear:both;
+                    text-align:right;
+                    padding:1%;	 	 
+                    
+                }
+                 a:hover {
+                    background:black;
+                    color:white;
+                }
+    
+    
+                .vertical-menu {
+                  width: 20%;
+                  background-color: rgb(145, 184, 211);
+                  color: rgb(110, 156, 255);
+                  
+                }
+    
+                .vertical-menu a {
+                  background-color: #eee;
+                  color: black;
+                  display: list-item;
+                  padding: 1%;
+                  text-decoration: none;
+                }
+    
+                .vertical-menu a:hover {
+                  background-color: #ccc;
+    
+                }
+    
+                .vertical-menu a.active {
+                  background-color:rgb(145, 184, 211) ;
+                  color:rgb(145, 184, 211);
+                }
+    
+                td{
+    border:1px;
+    border:#eeeeee;
+    }
+    tr.head{
+    background-color:rgb(145, 184, 211);
+    }
+    tr{
+    background-color:#eeeeee;
+    color:black;
+    font-size: 20px;
+    }
+
+    
+     
+    
+                
+            </style>
+    </head>
+
+    <body>
+        
+
+            <div class="container">
+            <header id="ballina">
+            <table class="head" style="width:100%; background-color:rgb(145, 184, 211)">
+            <tr class="head"><td style="width:30%;">
+            <svg height="130" width="300">
+    <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" 
+    style="stop-color:rgb(110, 156, 255); stop-opacity:1" />
+    <stop offset="100%" 
+    style="stop-color:rgb(236, 240, 241); stop-opacity:1" />
+    </linearGradient>
+    </defs>
+    <ellipse cx="200" cy="70" rx="95" ry="50" fill="url(#grad1)"/>
+    <text fill="black" font-size="35" font-family="Brush Script MT" x="125" y="80">Dhuro Gjakë</text>
+    </svg>
+    </td>
+    <td style="width:70%;">
+                
+                <h1 style="color:black;  text-align: center;" >Kërkuesit</h1>
+                </td>
+                </tr>
+                </table>
+            </header>
+
+                <nav class="vertical-menu ">
+                    <ul id=menu style="background-color:rgb(145, 184, 211); font-size: 20px;">
+                        <li><a href="index.html" style="background-color: rgb(145, 184, 211);"><h3>Ballina</h3></a></li>
+                        <li><a href="dhuruesit1.html"  style="background-color: rgb(145, 184, 211);"><h3>Dhuruesit</h3></a></li>
+                        <li><a href="kerkuesit.html"  style="background-color: rgb(145, 184, 211);"><h3>K&euml;rkuesit</h3></a></li>
+                        <li><a href="kontakti.html"  style="background-color: rgb(145, 184, 211);"><h3>Kontakti</h3></a></li>
+                    </ul>
+                </nav>
+                <section id="k&euml;rkuesit">
+                    <table style="width:70%;" align="right">
+                    
+                                <tr style="color:black; background-color:rgb(145, 184, 211);">
+                                <td>
+                                <p>P&euml;r t&euml; gjetur se cilit grup mund ti dhuroni gjak&euml; dhe nga cili mund t&euml; merrni ju lutem zgjedhni grupin tuaj te gjakut m&euml; posht&euml;:</p>
+                    
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="a_pozitiv()">A+</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="a_negativ()">A-</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="b_pozitiv()">B+</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="b_negativ()">B-</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="ab_pozitiv()">AB+</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="ab_negativ()">AB-</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="o_pozitiv()">O+</button>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" onclick="o_negativ()">O-</button>
+                    
+                    <p id="demo">Ju lutem shtypni nj&euml;rin nga butonet.</p>
+                    
+                    <script>
+                    
+                    function a_pozitiv() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:A+ dhe AB+ Dhe mund të merrni nga:A+, A-, O+ dhe O-";
+                        }
+                        function a_negativ() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:A-, A+, AB- dhe AB+ Dhe mund të merrni nga:A- dhe O-";
+                        }
+                        function b_pozitiv() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:B+ dhe AB+ Dhe mund të merrni nga:B+, B-, O+ dhe O-";
+                        }
+                        function b_negativ() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:AB-, AB+, B- dhe B+ Dhe mund të merrni nga:B- dhe O-";
+                        }
+                        function ab_pozitiv() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:AB+ Dhe mund te merrni nga të gjitha grupet";
+                        }
+                        function ab_negativ() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:AB+ dhe AB- Dhe mund të merrni nga:AB+, A-, B- dhe O-";
+                        }
+                        function o_pozitiv() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni grupeve:O+, A+, B+ dhe AB+ Dhe mund të merrni nga:O+ dhe O-";
+                        }
+                        function o_negativ() {
+                        document.getElementById("demo").innerHTML = "Ju mund ti dhuroni the gjitha grupeve Dhe mund të merrni vetem nga O-";
+                        }
+                    
+                    </script>
+                                </td>
+                                </tr>
+                    
+                    </table>
+                    <br>
+                              <table style="width:70%; color:white; background-color:rgb(145, 184, 211); " align="right">
+                    
+                    <tr style="color:black; background-color:rgb(145, 184, 211);">
+                    <td style="width:auto; height:auto; border: right 15px;">
+                    <p><b>Emri:</b>Agim<br><br>
+                    <b>Grupi i gjakut:</b>A+<br> <br>        
+                    <b>Lokacioni:</b>Prishtin&euml;
+                    </td>
+                    <td style="width:auto; height:auto; border-left:0px;">
+                    <b>Mbiemri:</b>Gashi<br><br>
+                    <b>Koha:</b>Urgjente <br><br>
+                    <b>Tel:</b>044-111-212
+                    <td style="width:20%;">
+                    <img src="C:\Users\Hp\Desktop\projekti\Images/nopicture.png"  style="width:100%; height:100%;">
+                    </td> 
+                    
+                    <td style=" width:20%; ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.865081554925!2d21.155884810435154!3d42.643020109402556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549e915de88a4f%3A0xdd725b95c5b659fb!2sSpitali%20Amerikan!5e0!3m2!1sen!2s!4v1621064360771!5m2!1sen!2s" width="100%" height="150%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+                    </td>
+                    </tr> <br> 
+                    <tr style="color:black; background-color:rgb(145, 184, 211);">
+                    <td style="width:15%; height:100%; border-right:0px; ">
+                    <b>Emri:</b>Gazmend<br><br>
+                    <b>Grupi i gjakut:</b>O-<br> <br>        
+                    <b>Lokacioni:</b>Pej&euml;
+                    </td>
+                    <td style="width:15%; height:100%; border-left:0px;">
+                    <b>Mbiemri:</b>Rexhepi<br><br>
+                    <b>Koha:</b>3 dite <br><br>
+                    <b>Tel:</b>044-000-111
+                    <td style="width:20%;">
+                    <img src="C:\Users\Hp\Desktop\projekti\Images/pb.jpg"  style="width:100%; height:80%;">
+                    </td>
+                    
+                    <td style=" width:35%; height:25%; ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.9592169432517!2d20.271462450911248!3d42.66221962906551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1352fc37afbc9e91%3A0x6c47373c033d4413!2sRegional%20Hospital%20-%20Pej%C3%AB%2C%20Pej%C3%AB!5e0!3m2!1sen!2s!4v1621065192637!5m2!1sen!2s" width="100%" height="300%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+                    </td>
+                    </tr> <br> 
+                    <tr style="color:black; background-color:rgb(145, 184, 211);">
+                    <td style="width:15%;height:100%; border-right:0px; ">
+                    <b>Emri:</b>Egzon<br><br>
+                    <b>Grupi i gjakut:</b>O+<br> <br>        
+                    <b>Lokacioni:</b>Gjilan <br> <br>
+                    </td>
+                    <td style="width:15%; height:100%; border-left:0px;">
+                    <b>Mbiemri:</b>Berisha<br><br>
+                    <b>Koha:</b>2 Jave <br><br>
+                    <b>Tel:</b>044-222-333 <br> <br>
+                    <td style="width:20%;">
+                    <img src="C:\Users\Hp\Desktop\projekti\Images/nath.jpg"  style="width:100%; height:100%;">
+                    </td>
+                    
+                    <td style=" width:20%; ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2943.5687606777815!2d21.461658904609227!3d42.45819073642902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13548d28775cde03%3A0xe04f74ca0dd3a51c!2sSpitali%20Rajonal%2C%20Idriz%20Seferi%2C%20Gjilan!5e0!3m2!1sen!2s!4v1621064968873!5m2!1sen!2s" width="100%" height="150%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+                    </td>
+                    </tr> <br>
+        
+                    <tr style="color:black; background-color:rgb(145, 184, 211);">
+                    <td style="width:20% ; height:100%; border-right:0px; ">
+                    <b>Emri:</b>Drita<br><br>
+                    <b>Grupi i gjakut:</b>AB+<br> <br>        
+                    <b>Lokacioni:</b>Ferizaj
+                    </td>
+                    <td style="width:20%; height:100%; border-left:0px;">
+                    <b>Mbiemri:</b>Shala<br><br>
+                    <b>Koha:</b>Urgjent <br><br>
+                    <b>Tel:</b>044-222-111
+                    <td style="width:20%;">
+                    <img src="C:\Users\Hp\Desktop\projekti\Images/nopicture.png"  style="width:100%; height:100%;">
+                    </td>
+                    
+                    <td style=" width:30%; ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2947.6586068635356!2d21.144438342441966!3d42.3711143833456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13547e54406e856f%3A0xcfaad7b75ee775c8!2sSpitali%20Rajonal%20Ferizaj%2C%20Ferizaj%2070000!5e0!3m2!1sen!2s!4v1621065072894!5m2!1sen!2s" width="100%" height="100%" style="border:5;" allowfullscreen="" loading="lazy"></iframe>
+                    </td>
+                    </tr>
+                    
+                    
+                    </table>
+            </body>
+        </html>
+        

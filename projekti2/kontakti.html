@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhuro Gjak&euml;</title>
     <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
         
         *{
   margin: 0;
@@ -15,7 +16,7 @@
 
 body{
   min-height: 100vh;
-  background-color: #001018;
+  background-color:  rgb(145, 184, 211);
 }
 
 
@@ -35,10 +36,7 @@ header{
   transition: 0.6s;
 }
 
-header.sticky{
-  background:#001029;
-  padding: 15px 100px;
-}
+
 
 header .brand{
   color: #fff;
@@ -80,27 +78,9 @@ header .btn{
   display: none;
 }
 
-.section-two{
-  min-height: 100px;
-  background: #001018;
-  padding: 20px 100px;
-}
 
-.section-two h2{
-  color: rgba(255, 255, 255, 0.5);
-  background: #001018;
-  font-size: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin: 30px 0;
-}
 
-.section-two p{
-  background-color: #001018;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 18px;
-  margin: 30px 0;
-}
+
 
 @media (max-width: 1060px){
   header .btn{
@@ -109,7 +89,7 @@ header .btn{
 
   header .menu{
     position: fixed;
-    background: #001018;
+    background:  rgb(145, 184, 211);
     flex-direction: column;
     min-width: 400px;
     height: 100vh;
@@ -145,13 +125,241 @@ header .btn{
     line-height: 60px;
   }
 }
+/* pjesa e sllajderit*/
+.slider{
+ 
+  width: 800px;
+  height: 500px;
+  border-radius: 40px;
+  overflow: hidden;
+
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display:flex;
+ 
+
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css per pjesen manuale te sllajderit*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css per pjesen automatike te sllajder*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+      
+ .container{
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+     }
+
+
+
+    /* Pjesa e kontaktit*/
+
+    #contact-section .container p{
+      text-align: center; 
+      width: 70%; 
+      margin-left: auto;
+       margin-right: auto; 
+       padding-bottom: 3%;
+       color: #fff;
+       letter-spacing:3px;
+    }
+
+    .contact-form i.fa{
+
+     
+      font-size: 22px; 
+      padding: 3%;
+      background-color: none;
+      border-radius: 80%;
+      margin: 2%;
+      cursor: pointer;
+      border:2px solid rgb(190, 190, 190);
+      color: rgb(233, 8, 8);
+    }
+    
+    .contact-form i.fa:hover{
+      cursor: pointer;
+      border:2px solid white;
+      color: white;
+    }
+     
+      .contact-form{
+        display: grid;
+        grid-template-columns: auto auto;
+         }
+      
+      .form-info{
+        font-size: 16px;
+        font-style: italic;
+        color: white;
+        letter-spacing: 2px;
+      }
+      input{
+        padding: 10px;
+        margin:10px;
+        width: 70%;
+        background-color:rgba(136, 133, 133, 0.5);
+        color: rgb(8, 8, 8);
+        border: none;
+        outline:none;
+      }
+
+      input::placeholder{
+        color: white;
+      }
+    
+       textarea{
+      padding: 10px;
+      margin: 10px;     
+      width: 70%;
+      background-color:rgba(136, 133, 133, 0.5);
+      color:rgb(8, 8, 8);
+      border: none;
+      outline:none;
+     }
+     textarea::placeholder{
+       color: white;
+     }
+     
+      
+    
+      .submit{
+      width: 40%;
+      background: none;
+      padding: 4px;
+      outline: none;
+    
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 33px;
+      text-align: center;
+      cursor: pointer;
+      letter-spacing: 2px;
+      margin-left: 3%;
+      border:2px solid rgb(190, 190, 190);
+      color: rgb(8, 8, 8);
+     }
+
+     .submit:hover{
+           border: 1px solid #fff;
+      color: #fff;
+      cursor: pointer;
+     }
+
+      
+    @media (max-width: 768px){
+
+ #contact-section .contact-form{
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      #contact-section .submit{
+
+        width: 60%;
+      }
+
+  }
     </style>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   </head>
   <body>
     <header>
         <a href="#" class="brand">
-          <svg height="130" width="300">
+          <svg height="100%" width="300">
   <defs>
   <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
   <stop offset="0%" 
@@ -161,7 +369,7 @@ header .btn{
   </linearGradient>
   </defs>
   <ellipse cx="117" cy="70" rx="95" ry="50" fill="url(#grad1)"/>
-  <text fill="black" font-size="17" font-family="Brush Script MT" x="45" y="70">Dhuro Gjakë</text>
+  <text fill="black" font-size="17" font-family="Brush Script MT" x="45" y="70">Dhuro Gjak</text>
   </svg>
   </td></a>
         <div class="menu">
@@ -178,14 +386,97 @@ header .btn{
           <i class="fas fa-bars menu-btn"></i>
         </div>
         </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <br>
+          <!-- pjesa e kontaktit -->
+          <section id="contact-section">
+            <div class="container">
+            <div class="contact-form">
+ 
+                   <!-- pjesa pare -->
+                <div>
+                  <i class="fa fa-map-marker"></i><span class="form-info">  Lagjja Kalabria,10000 Prishtine, Kosovo </span><br>
+                  <i class="fa fa-phone" > </i><span class="form-info"> +383 44-888-999</span><br>
+                  <i class="fa fa-envelope"></i><span class="form-info">  UBT-CSE@ubt-uni.net</span>
+                </div>
+                
+                    <!-- pjesa dyte -->
+            <div>        
+              <form>
+                <input type="text" placeholder="Emri" required>
+                <input type="text" placeholder="Mbiemri"><br>
+                <input type="Email" placeholder="Emaili" required><br>
+              <textarea name="message" placeholder="Shkruani mesazhin tuaj!" rows="5" required></textarea><br>
+                <button class="submit" >Dërgo Mesazhin</button> 
+              </form>   
+                </div>
+              </div>
+            </div>
+          </section>
+        <br>
+        <br>
+        <br>
+        <br>
+          <!--pjesa sliderit-->
+    <div class="slider">
+      <div class="slides">
+        
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        
+        
+        <div class="slide first">
+          <img src="C:\Users\Blacksn0w\Desktop\projekti\Images\foto1sllajder.png" alt="">
+        </div>
+        <div class="slide">
+          <img src="C:\Users\Blacksn0w\Desktop\projekti\Images\foto2sllajder.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="C:\Users\Blacksn0w\Desktop\projekti\Images\foto3sllajder.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="C:\Users\Blacksn0w\Desktop\projekti\Images\foto4sllajder.jpg" alt="">
+        </div>
+      
+        <!--pjesa automatike per sllajder-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        
+      </div>
+  
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    
+    </div>
+    <br>
+    <br>
+    <br>
+    
+
+
         <script type="text/javascript">
-            //javascript for navigation bar effect on scroll
+            //javascript per pjesen e menys ne levizje
             window.addEventListener("scroll", function(){
               var header = document.querySelector("header");
               header.classList.toggle('sticky', window.scrollY > 0);
             });
         
-            //javascript for responsive navigation sidebar menu
+            //javascript per pjesen responsive ansore te menys
             var menu = document.querySelector('.menu');
             var menuBtn = document.querySelector('.menu-btn');
             var closeBtn = document.querySelector('.close-btn');
@@ -197,6 +488,16 @@ header .btn{
             closeBtn.addEventListener("click", () => {
               menu.classList.remove('active');
             });
+
+            /*slajjder javascript*/
+            var counter = 1;
+    setInterval(function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 5000);
             </script>
         
           </body>

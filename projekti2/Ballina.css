@@ -14,8 +14,6 @@ body{
 
 
 
-
-
 header{
   z-index: 999;
   position: fixed;
@@ -27,6 +25,10 @@ header{
   align-items: center;
   padding: 20px 100px;
   transition: 0.6s;
+}
+header.sticky{
+  background:#72cbff;
+  padding: 15px 100px;
 }
 
 
@@ -149,4 +151,8 @@ tr.head{
  
   font-size: 20px;
   }
+  
+
+
+  
   
